@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Wars</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+</body>
+<script>
+    window.onload = () => {
+        console.log('output lenghty string');
+        console.log(typeof ("sasa"));
+        console.log(typeof (false));
+
+
+        const numbers = [];
+        netPrice(numbers);
+
+        function netPrice(numbers) {
+            avg(numbers);
+        }
+
+        function avg(arr) {
+            console.log('avg entered');
+            let sum = 0;
+            let lngth = arr.length;
+            for (let i = 0; i < arr.length; i++) {
+
+                if (typeof (arr[i]) == 'string') {
+                    sum += arr[i].length;
+                } else if (typeof (arr[i]) == 'number') {
+                    sum += arr[i];
+
+                } else if (arr[i] == false) {
+                    sum += 0;
+                } else if (arr[i] == true) {
+                    sum += 1;
+                }
+
+            }
+            if (lngth == 0) {
+                console.log(null);
+                return null;
+            } else {
+                console.log(sum / lngth);
+                return (sum / lngth);
+            }
+        }
+    }
+</script>
+
+</html>
